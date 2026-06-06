@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>多米尼克投资入籍(CBI)资格评估</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue',sans-serif;background:#f5f6f8;color:#1a1a1a;line-height:1.6;-webkit-text-size-adjust:100%}
+.container{max-width:720px;margin:0 auto;padding:0 0 40px}
+.header{background:linear-gradient(135deg,#006b3f,#009a5a);color:#fff;padding:32px 20px 28px;text-align:center;position:sticky;top:0;z-index:10}
+.header h1{font-size:22px;margin-bottom:4px}
+.header p{opacity:.85;font-size:13px}
+.card{background:#fff;border-radius:14px;padding:24px 18px;margin:16px 12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card h2{font-size:17px;color:#006b3f;margin-bottom:16px;padding-bottom:10px;border-bottom:1.5px solid #eef1f5;display:flex;align-items:center;gap:8px}
+.card h2 .num{background:#006b3f;color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.fg{margin-bottom:16px}
+.fg label.q{display:block;font-weight:600;font-size:14px;margin-bottom:5px;color:#333}
+.fg .hint{font-size:12px;color:#999;margin-bottom:4px;font-weight:400}
+.fg select,.fg input[type=text]{width:100%;padding:11px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:15px;transition:border .2s;background:#fafafa;-webkit-appearance:none}
+.fg select:focus,.fg input:focus{outline:none;border-color:#009a5a;background:#fff}
+.detail-input{margin-top:8px;display:none}
+.detail-input.show{display:block}
+.detail-input input{width:100%;padding:10px 12px;border:1.5px solid #b8e6d0;border-radius:8px;font-size:14px;background:#e8faf0}
+.detail-input input::placeholder{color:#999}
+.detail-input .label-sm{font-size:12px;color:#666;margin-bottom:4px;display:block}
+.radio-row{display:flex;gap:10px;flex-wrap:wrap}
+.radio-row .ropt{flex:1;min-width:80px;padding:10px 16px;border:1.5px solid #ddd;border-radius:8px;text-align:center;cursor:pointer;font-size:14px;background:#fafafa;transition:all .15s;user-select:none}
+.radio-row .ropt:active,.radio-row .ropt.sel{border-color:#009a5a;background:#e8faf0;font-weight:600;color:#006b3f}
+.radio-row input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.btn{display:block;width:calc(100% - 24px);margin:20px auto;padding:14px;background:linear-gradient(135deg,#006b3f,#009a5a);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer}
+.btn:active{transform:scale(.98)}
+
+.results-wrap{display:none;margin:0 12px}
+.results-wrap.show{display:block}
+.rs-card{background:#fff;border-radius:14px;padding:20px 18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.rs-card h3{font-size:18px;margin-bottom:6px;color:#006b3f}
+.tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600;margin:3px}
+.tg{background:#dcfce7;color:#166534}
+.ty{background:#fef3c7;color:#92400e}
+.tr{background:#fee2e2;color:#991b1b}
+.prog{background:#f8fafc;border-radius:10px;padding:16px;margin-bottom:10px}
+.prog.el{border-left:4px solid #22c55e}
+.prog.mb{border-left:4px solid #f59e0b}
+.prog.no{border-left:4px solid #e0e0e0;opacity:.85}
+.prog h4{font-size:15px;margin-bottom:6px;color:#006b3f}
+.prog .st{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600;margin-bottom:6px}
+.st-q{background:#dcfce7;color:#166534}.st-m{background:#fef3c7;color:#92400e}.st-n{background:#fee2e2;color:#991b1b}
+.prog .d{font-size:13px;color:#555;line-height:1.7}
+.g{color:#166534;font-weight:600}.o{color:#c2410c;font-weight:600}
+table.cm{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
+table.cm th,table.cm td{border:1px solid #e2e8f0;padding:7px;text-align:center}
+table.cm th{background:#f1f5f9;font-weight:600;font-size:11px}
+table.cm td:first-child{text-align:left;font-weight:500}
+.hb{background:#e8faf0;border:1px solid #b8e6d0;border-radius:8px;padding:12px;margin:10px 0;font-size:13px}
+.hb.w{background:#fff7ed;border-color:#fed7aa}
+.btn-sm{display:inline-block;padding:10px 20px;margin:4px 0;background:#eef1f5;color:#555;border:none;border-radius:8px;font-size:13px;cursor:pointer}
+.spinner{display:inline-block;width:12px;height:12px;border:2px solid #ddd;border-top-color:#009a5a;border-radius:50%;animation:spin .8s linear infinite;margin-right:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:400px){.radio-row .ropt{min-width:60px;padding:8px 12px;font-size:13px}.card{padding:18px 14px;margin:10px 8px}.header h1{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header"><h1>🇩🇲 多米尼克投资入籍(CBI)资格评估</h1><p>基于2024加勒比五国集体涨价后政策 · 约3分钟</p></div>
+
+<form id="qform">
+
+<div class="card"><h2><span class="num">1</span> 基本信息</h2>
+<div class="fg"><label class="q">年龄</label><select id="age"><option value="">请选择</option><option value="18-30">18-30岁</option><option value="31-40">31-40岁</option><option value="41-50">41-50岁</option><option value="51-65">51-65岁</option><option value="65+">65岁及以上</option></select></div>
+<div class="fg"><label class="q">国籍/户籍</label><select id="nationality"><option value="">请选择</option><option value="cn">中国内地居民</option><option value="cn-foreign">中国籍+已取得外国永居</option><option value="mo-tw-hk">港澳台居民</option><option value="other">其他国家/地区</option></select></div>
+<div class="fg"><label class="q">是否有无犯罪记录<span class="hint">(选择“是”表示无犯罪记录；CBI项目强制要求无犯罪)</span></label><div class="radio-row"><label class="ropt"><input type="radio" name="nocrim" value="yes"> 是</label><label class="ropt"><input type="radio" name="nocrim" value="no"> 否</label></div></div>
+<div class="fg"><label class="q">整体健康状况</label><div class="radio-row"><label class="ropt"><input type="radio" name="health" value="good"> 良好</label><label class="ropt"><input type="radio" name="health" value="issue"> 有重大疾病</label></div></div>
+</div>
+
+<div class="card"><h2><span class="num">2</span> 投资能力</h2>
+<div class="fg"><label class="q">个人/家庭净资产<span class="hint">(合并计算，美元)</span></label><select id="networth"><option value="">请选择</option><option value="lt200k">低于$200,000</option><option value="200k-500k">$200,000-$500,000</option><option value="500k-1m">$500,000-$1,000,000</option><option value="gte1m">$1,000,000及以上</option></select></div>
+<div class="fg"><label class="q">可用于CBI的投资预算<span class="hint">(捐款或购房)</span></label><select id="budget"><option value="">请选择</option><option value="lt200k">低于$200,000</option><option value="200k-300k">$200,000-$300,000</option><option value="300k-500k">$300,000-$500,000</option><option value="gte500k">$500,000及以上</option></select></div>
+<div class="fg"><label class="q">资金来源是否合法且可解释？</label><div class="radio-row"><label class="ropt"><input type="radio" name="fundsource" value="yes"> 是，来源清晰</label><label class="ropt"><input type="radio" name="fundsource" value="concern"> 有潜在问题</label></div></div>
+<div class="fg"><label class="q">偏好投资方式</label><div class="radio-row"><label class="ropt"><input type="radio" name="investroute" value="edf"> EDF捐款（不可退）</label><label class="ropt"><input type="radio" name="investroute" value="realestate"> 政府批准房产</label><label class="ropt"><input type="radio" name="investroute" value="either"> 均可</label><label class="ropt"><input type="radio" name="investroute" value="unsure"> 不确定</label></div></div>
+</div>
+
+<div class="card"><h2><span class="num">3</span> 家庭情况</h2>
+<div class="fg"><label class="q">婚姻状况</label><select id="marital"><option value="">请选择</option><option value="single">单身</option><option value="married">已婚</option><option value="divorced">离异</option><option value="widowed">丧偶</option></select></div>
+<div class="fg"><label class="q">子女数量</label><select id="childrenNum"><option value="">请选择</option><option value="0">无</option><option value="1">1人</option><option value="2">2人</option><option value="3">3人</option><option value="4+">4人及以上</option></select></div>
+<div class="fg" id="fg-children-age" style="display:none"><label class="q">子女年龄范围<span class="hint">(多米尼克可携带30岁以下在读子女)</span></label><select id="childrenAge"><option value="">请选择</option><option value="all-under18">全部18岁以下</option><option value="some-18-30">有18-30岁在读</option><option value="some-over30">有30岁以上</option><option value="mixed">多年龄段</option></select></div>
+<div class="fg"><label class="q">是否需要携带父母？<span class="hint">(多米尼克要求父母65岁+)</span></label><div class="radio-row"><label class="ropt"><input type="radio" name="takeParents" value="yes"> 是</label><label class="ropt"><input type="radio" name="takeParents" value="no"> 否</label><label class="ropt"><input type="radio" name="takeParents" value="maybe"> 待定</label></div></div>
+</div>
+
+<div class="card"><h2><span class="num">4</span> 出行需求</h2>
+<div class="fg"><label class="q">前往申根区（欧洲26国）出行频率</label><select id="schedule"><option value="">请选择</option><option value="frequent">频繁（每年多次）</option><option value="occasional">偶尔（每年1-2次）</option><option value="rare">很少</option><option value="never">基本不去</option></select></div>
+<div class="fg"><label class="q">前往英国出行频率</label><select id="ukTravel"><option value="">请选择</option><option value="frequent">频繁</option><option value="occasional">偶尔</option><option value="rare">很少</option><option value="never">基本不去</option></select></div>
+<div class="fg"><label class="q">当前签证状态<span class="hint">(有任意申根/英美签可加分)</span></label><div class="radio-row"><label class="ropt"><input type="radio" name="visastatus" value="schedule"> 持有有效申根签</label><label class="ropt"><input type="radio" name="visastatus" value="usuk"> 持有有效英美签</label><label class="ropt"><input type="radio" name="visastatus" value="other"> 有其他签证</label><label class="ropt"><input type="radio" name="visastatus" value="none"> 无</label></div></div>
+<div class="fg"><label class="q">是否有签证被拒记录？</label><div class="radio-row"><label class="ropt"><input type="radio" name="visadenied" value="no"> 无拒签</label><label class="ropt"><input type="radio" name="visadenied" value="yes"> 有拒签</label></div>
+<div id="dt-visadenied" class="detail-input"><span class="label-sm">拒签国家及原因简述：</span><input type="text" id="visadenied-info" placeholder="例如：加拿大2023年、资金不足"></div></div>
+</div>
+
+<div class="card"><h2><span class="num">5</span> 移民目的<span class="hint">(可多选)</span></h2>
+<div class="fg"><label class="q">主要目的</label><div class="radio-row">
+<label class="ropt"><input type="checkbox" name="purpose" value="schedule-free"> 申根免签出行</label>
+<label class="ropt"><input type="checkbox" name="purpose" value="asset"> 资产保护</label>
+<label class="ropt"><input type="checkbox" name="purpose" value="tax"> 税务规划</label>
+<label class="ropt"><input type="checkbox" name="purpose" value="bank"> 海外银行开户</label>
+</div></div>
+<div class="fg"><div class="radio-row">
+<label class="ropt"><input type="checkbox" name="purpose" value="passport"> 第二护照备用</label>
+<label class="ropt"><input type="checkbox" name="purpose" value="e2"> E-2赴美</label>
+<label class="ropt"><input type="checkbox" name="purpose" value="hqs"> 华侨生联考</label>
+<label class="ropt"><input type="checkbox" name="purpose" value="life"> 移居生活</label>
+</div></div>
+</div>
+
+<div class="card"><h2><span class="num">6</span> 替代方案</h2>
+<div class="fg"><label class="q">是否了解过其他加勒比CBI项目？<span class="hint">(可多选)</span></label><div class="radio-row">
+<label class="ropt"><input type="checkbox" name="otherCBI" value="gd"> 格林纳达（有E-2）</label>
+<label class="ropt"><input type="checkbox" name="otherCBI" value="kn"> 圣基茨</label>
+<label class="ropt"><input type="checkbox" name="otherCBI" value="lc"> 圣卢西亚</label>
+<label class="ropt"><input type="checkbox" name="otherCBI" value="ag"> 安提瓜</label>
+</div></div>
+<div class="fg"><label class="q">是否考虑土耳其$40万购房入籍？<span class="hint">(更大投资，但有E-2条约国+华侨生联考优势)</span></label><div class="radio-row"><label class="ropt"><input type="radio" name="turkey" value="yes"> 是，可考虑</label><label class="ropt"><input type="radio" name="turkey" value="no"> 否，预算不够</label><label class="ropt"><input type="radio" name="turkey" value="maybe"> 可了解</label></div></div>
+<div class="fg"><label class="q">是否愿意配合强制面试？<span class="hint">(2024年起加勒比五国CBI统一要求)</span></label><div class="radio-row"><label class="ropt"><input type="radio" name="interview" value="yes"> 愿意</label><label class="ropt"><input type="radio" name="interview" value="no"> 不愿意</label></div></div>
+</div>
+
+<button type="button" class="btn" onclick="submitForm()">📊 提交评估</button>
+</form>
+
+<div class="results-wrap" id="results"></div>
+</div>
+
+<script>
+(function(){
+  var D=document;
+  function R(name){var e=D.querySelector('input[name="'+name+'"]:checked');return e?e.value:null;}
+  function S(id){var e=D.getElementById(id);return e?e.value:'';}
+  function I(id){var e=D.getElementById(id);return e?e.value.trim():'';}
+  function Y(v){var m={'yes':'是','no':'否','good':'良好','issue':'有重大疾病','concern':'有潜在问题','edf':'EDF捐款','realestate':'政府批准房产','either':'均可','unsure':'不确定','schedule':'持有有效申根签','usuk':'持有有效英美签','other':'有其他签证','none':'无','maybe':'待定'};return m[v]||v||'未填';}
+  function L(id,v){var m={'age':{'18-30':'18-30岁','31-40':'31-40岁','41-50':'41-50岁','51-65':'51-65岁','65+':'65岁及以上'},'nationality':{'cn':'中国内地居民','cn-foreign':'中国籍+已取得外国永居','mo-tw-hk':'港澳台居民','other':'其他国家/地区'},'networth':{'lt200k':'低于$200,000','200k-500k':'$200K-$500K','500k-1m':'$500K-$1M','gte1m':'$1M及以上'},'budget':{'lt200k':'低于$200,000','200k-300k':'$200K-$300K','300k-500k':'$300K-$500K','gte500k':'$500K及以上'},'marital':{'single':'单身','married':'已婚','divorced':'离异','widowed':'丧偶'},'childrenNum':{'0':'无','1':'1人','2':'2人','3':'3人','4+':'4人及以上'},'childrenAge':{'all-under18':'全部18岁以下','some-18-30':'有18-30岁在读','some-over30':'有30岁以上','mixed':'多年龄段'},'schedule':{'frequent':'频繁（每年多次）','occasional':'偶尔（每年1-2次）','rare':'很少','never':'基本不去'},'ukTravel':{'frequent':'频繁','occasional':'偶尔','rare':'很少','never':'基本不去'}};return (m[id]||{})[v]||v;}
+
+  // Radio selection visual
+  // Mobile-safe option buttons: do not rely on native hidden input click/change events
+  function selectOption(label){
+    var input=label.querySelector('input');
+    if(!input)return;
+    if(input.type==='radio'){
+      input.checked=true;
+      var row=label.closest('.radio-row');
+      if(row)row.querySelectorAll('.ropt').forEach(function(l){l.classList.remove('sel');});
+      label.classList.add('sel');
+      onChange(input.name,input.value);
+    }else if(input.type==='checkbox'){
+      input.checked=!input.checked;
+      label.classList.toggle('sel',input.checked);
+    }
+  }
+  D.querySelectorAll('.radio-row .ropt').forEach(function(label){
+    label.setAttribute('tabindex','0');
+    label.addEventListener('touchstart',function(e){selectOption(this);e.preventDefault();}, {passive:false});
+    label.addEventListener('mousedown',function(e){selectOption(this);e.preventDefault();});
+    label.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){selectOption(this);e.preventDefault();}});
+  });
+
+  // Show children age when children > 0
+  D.getElementById('childrenNum').addEventListener('change',function(){D.getElementById('fg-children-age').style.display=(this.value!=='0'&&this.value!=='')?'block':'none';});
+
+  window.goBack=function(){var D=document;D.getElementById("results").classList.remove("show");D.getElementById("qform").style.display="";setTimeout(function(){D.getElementById("qform").scrollIntoView({behavior:"smooth"});},50);};
+  function onChange(n,v){
+    if(n==='visadenied')D.getElementById('dt-visadenied').classList.toggle('show',v==='yes');
+  }
+
+  window.submitForm=function(){
+    // Gather all values
+    var age=S('age'),nat=S('nationality'),nocrim=R('nocrim'),health=R('health'),
+        networth=S('networth'),budget=S('budget'),fundsource=R('fundsource'),investroute=R('investroute'),
+        marital=S('marital'),childrenNum=S('childrenNum'),childrenAge=(childrenNum==='0'||!childrenNum)?'':S('childrenAge'),takeParents=R('takeParents'),
+        schedule=S('schedule'),ukTravel=S('ukTravel'),visastatus=R('visastatus'),visadenied=R('visadenied'),
+        interview=R('interview');
+
+    // Validation
+    if(!age||!nat||!nocrim||!health||!networth||!budget||!fundsource||!investroute||!marital||!childrenNum){
+      var m=[];
+      if(!age)m.push('年龄');if(!nat)m.push('国籍');if(!nocrim)m.push('无犯罪记录');if(!health)m.push('健康状况');
+      if(!networth)m.push('净资产');if(!budget)m.push('投资预算');if(!fundsource)m.push('资金来源');if(!investroute)m.push('投资方式');
+      if(!marital)m.push('婚姻状况');if(!childrenNum)m.push('子女数量');
+      if(!schedule)m.push('申根出行');if(!ukTravel)m.push('英国出行');if(!visastatus)m.push('签证状态');
+      if(!visadenied)m.push('拒签记录');if(!interview)m.push('面试意愿');
+      alert('请完成以下必填项：\n'+m.join('、'));return;
+    }
+
+    var w=D.getElementById('results');
+    D.getElementById('qform').style.display='none';
+    w.innerHTML='<div class="rs-card" style="text-align:center;padding:50px 20px"><div style="font-size:40px">📤</div><h3>已提交</h3><p style="color:#888;font-size:13px;margin:6px 0"><span class="spinner"></span>正在分析评估...</p></div>';
+    w.classList.add('show');w.scrollIntoView({behavior:'smooth'});
+
+    // Build data for remote submit
+    var ps=[];D.querySelectorAll('input[name="purpose"]:checked').forEach(function(c){var mp={'schedule-free':'申根免签','asset':'资产保护','tax':'税务规划','bank':'海外银行开户','passport':'第二护照','e2':'E-2赴美','hqs':'华侨生联考','life':'移居生活'};ps.push(mp[c.value]||c.value);});
+    var otherCBI=[];D.querySelectorAll('input[name="otherCBI"]:checked').forEach(function(c){var mo={'gd':'格林纳达','kn':'圣基茨','lc':'圣卢西亚','ag':'安提瓜'};otherCBI.push(mo[c.value]||c.value);});
+
+    var data={
+      age:L('age',age),nationality:L('nationality',nat),nocrim:Y(nocrim),health:Y(health),
+      networth:L('networth',networth),budget:L('budget',budget),fundsource:Y(fundsource),investroute:Y(investroute),
+      marital:L('marital',marital),childrenNum:L('childrenNum',childrenNum),childrenAge:L('childrenAge',childrenAge)||'不适用',takeParents:Y(takeParents),
+      schedule:L('schedule',schedule),ukTravel:L('ukTravel',ukTravel),visastatus:Y(visastatus),visadenied:Y(visadenied)+(visadenied==='yes'?'('+I('visadenied-info')+')':''),
+      purposes:ps.join('、')||'未选',
+      otherCBI:otherCBI.join('、')||'未了解',turkey:Y(R('turkey')),interview:Y(interview)
+    };
+
+    fetch('https://formsubmit.co/ajax/1104890128@qq.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).catch(function(){});
+
+    setTimeout(function(){showResults();},2000);
+  };
+
+  function showResults(){
+    var age=S('age'),nat=S('nationality'),nocrim=R('nocrim'),health=R('health'),
+        networth=S('networth'),budget=S('budget'),fundsource=R('fundsource'),investroute=R('investroute'),
+        marital=S('marital'),childrenNum=S('childrenNum'),childrenAge=(childrenNum==='0'||!childrenNum)?'':S('childrenAge'),takeParents=R('takeParents'),
+        schedule=S('schedule'),ukTravel=S('ukTravel'),visastatus=R('visastatus'),visadenied=R('visadenied'),
+        interview=R('interview');
+
+    var ps=[];D.querySelectorAll('input[name="purpose"]:checked').forEach(function(c){ps.push(c.value);});
+    var wantE2=ps.indexOf('e2')!==-1;
+    var wantHQS=ps.indexOf('hqs')!==-1;
+    var wantSchedule=ps.indexOf('schedule-free')!==-1;
+    var wantLife=ps.indexOf('life')!==-1;
+
+    // ---- Barrier check ----
+    var barriers=[];
+    if(nocrim!=='yes')barriers.push('有犯罪记录——所有CBI项目均要求无犯罪记录，此为硬性门槛。');
+    if(networth==='lt200k'&&budget==='lt200k')barriers.push('净资产及投资预算均不足$200,000，未达到多米尼克CBI最低门槛。');
+    if(fundsource==='concern')barriers.push('资金来源存在疑问——CBI项目要求严格反洗钱审查，资金来源不清可能导致拒批。');
+    if(interview==='no')barriers.push('拒绝面试——2024年起加勒比五国CBI统一要求强制面试，不可跳过。');
+    if(health==='issue')barriers.push('有重大疾病——可能影响健康审查，建议提前确认具体病情是否可接受。');
+
+    if(barriers.length>0){
+      D.getElementById('results').innerHTML='<div class="rs-card" style="border-left:4px solid #ef4444"><h3>⚠️ 评估结果：存在硬性障碍</h3>'+barriers.map(function(b){return'<p style="color:#991b1b;font-weight:500;margin:6px 0;font-size:13px;line-height:1.7">❌ '+b+'</p>';}).join('')+'<button class="btn-sm" onclick="goBack()">✏️ 返回修改</button></div>';return;
+    }
+
+    // ---- Family cost estimation ----
+    var familySize=1;
+    if(marital==='married')familySize+=1;
+    var chiNum=childrenNum==='0'?0:childrenNum==='1'?1:childrenNum==='2'?2:childrenNum==='3'?3:4;
+    familySize+=chiNum;
+    var hasParents=(takeParents==='yes'||takeParents==='maybe');
+    var estCost='';
+    if(familySize<=1)estCost='约$200,000';
+    else if(familySize<=2)estCost='约$250,000-$280,000';
+    else if(familySize<=4)estCost='约$300,000-$350,000';
+    else estCost='约$350,000-$400,000+';
+    if(hasParents)estCost+='（另加父母费用）';
+
+    // ---- Suitability score ----
+    var score=0,scoreDetail=[];
+    // Core financial
+    if(networth==='gte1m'||budget==='gte500k'){score+=20;scoreDetail.push(['✅','净资产充裕（+20）']);}
+    else if(networth==='500k-1m'||budget==='300k-500k'){score+=18;scoreDetail.push(['✅','净资产达标（+18）']);}
+    else if(networth==='200k-500k'||budget==='200k-300k'){score+=15;scoreDetail.push(['✅','净资产刚达标（+15）']);}
+    else {score+=5;scoreDetail.push(['⚠️','净资产边缘（+5）']);}
+    // Clean record
+    score+=15;scoreDetail.push(['✅','无犯罪记录（+15）']);
+    // Interview willingness
+    if(interview==='yes'){score+=10;scoreDetail.push(['✅','接受面试（+10）']);}
+    else{score-=5;scoreDetail.push(['⚠️','面试意愿待定（-5）']);}
+    // Travel need matches
+    if(schedule==='frequent'||schedule==='occasional'){score+=15;scoreDetail.push(['✅','申根出行需求匹配——多米尼克140+国免签含申根（+15）']);}
+    else if(schedule==='rare'){score+=8;scoreDetail.push(['⚠️','申根出行较少（+8）']);}
+    if(ukTravel==='frequent'||ukTravel==='occasional'){score+=10;scoreDetail.push(['✅','英国出行需求——多米尼克免签英国（+10）']);}
+    // Visa status
+    if(visastatus==='schedule'||visastatus==='usuk'){score+=5;scoreDetail.push(['✅','良好签证记录（+5）']);}
+    if(visadenied==='yes'){score-=10;scoreDetail.push(['⚠️','有拒签记录（-10）']);}
+    // Purpose match
+    if(wantSchedule){score+=10;scoreDetail.push(['✅','首要目的=申根免签，多米尼克免签国最多（+10）']);}
+    if(ps.indexOf('asset')!==-1){score+=8;scoreDetail.push(['✅','资产保护=多米尼克核心优势（+8）']);}
+    if(ps.indexOf('tax')!==-1){score+=8;scoreDetail.push(['✅','0%个税+无遗产税（+8）']);}
+    if(ps.indexOf('bank')!==-1){score+=5;scoreDetail.push(['✅','银行开户友好（+5）']);}
+    if(ps.indexOf('passport')!==-1){score+=5;scoreDetail.push(['✅','第二护照需求（+5）']);}
+    // Fund source clear
+    if(fundsource==='yes'){score+=5;scoreDetail.push(['✅','资金来源清晰（+5）']);}
+    // Deductions
+    if(wantE2){score-=20;scoreDetail.push(['⚠️','多米尼克非E-2条约国！E-2赴美不可行（-20）']);}
+    if(wantLife){score-=5;scoreDetail.push(['⚠️','多米尼克为功能性护照，非实际居住目的地（-5）']);}
+    if(wantHQS){score+=3;scoreDetail.push(['⚠️','华侨生联考理论上可行，但多米尼克为小国护照，部分学校可能有额外审核（+3）']);}
+
+    // Determine overall rating
+    var rating='',ratingColor='',ratingTag='';
+    if(score>=80){rating='强烈推荐：您非常适合多米尼克CBI项目';ratingColor='#16a34a';ratingTag='tg';}
+    else if(score>=60){rating='推荐：基本符合，存在少量需关注的问题';ratingColor='#ca8a04';ratingTag='ty';}
+    else if(score>=40){rating='有条件推荐：部分条件不匹配，建议对比其他国家';ratingColor='#ea580c';ratingTag='ty';}
+    else {rating='不推荐：存在较多不匹配因素';ratingColor='#dc2626';ratingTag='tr';}
+
+    // ---- Build result HTML ----
+    var h='';
+
+    // Summary card
+    h+='<div class="rs-card" style="border-left:4px solid '+ratingColor+'"><h3>📊 综合评估结果</h3>';
+    h+='<div style="display:flex;align-items:center;gap:12px;margin:12px 0"><div style="width:64px;height:64px;border-radius:50%;border:3px solid '+ratingColor+';display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:'+ratingColor+'">'+score+'</div><div><span class="tag '+ratingTag+'">'+rating+'</span><p style="font-size:12px;color:#888;margin-top:4px">总分 '+(score>100?100:score)+'/100（含扣分项）</p></div></div>';
+
+    // Family cost estimate
+    h+='<div class="hb"><strong>💰 预估费用：</strong>'+estCost+'（EDF捐款路线）<br><span style="font-size:12px;color:#666">实际费用取决于家庭组成和律师/背调/行政费——详细报价请咨询持牌代理</span></div>';
+
+    // Key flags
+    var flags=[];
+    if(wantE2)flags.push('<span class="tag tr">⚠️ E-2不可行——多米尼克非条约国→建议格林纳达</span>');
+    if(wantHQS)flags.push('<span class="tag ty">⚠️ 华侨生联考需确认目标院校是否接受多米尼克护照</span>');
+    if(childrenAge==='some-over30')flags.push('<span class="tag ty">⚠️ 有30岁以上子女可能无法随行</span>');
+    if(schedule==='never'&&ukTravel==='never')flags.push('<span class="tag ty">⚠️ 出行需求较低，CBI性价比可能不高</span>');
+    if(budget==='lt200k')flags.push('<span class="tag tr">❌ 预算低于$200K最低门槛</span>');
+    if(visadenied==='yes')flags.push('<span class="tag ty">⚠️ 有拒签记录，可能增加背调复杂度</span>');
+    if(flags.length>0)h+='<div style="margin:8px 0">'+flags.join(' ')+'</div>';
+    h+='</div>';
+
+    // Route comparison
+    h+='<div class="rs-card"><h3>🛤️ 两条路线对比</h3>';
+    h+='<div class="prog el"><h4>路线A：经济多元化基金(EDF)捐款</h4><span class="st st-q">✅ 推荐</span><div class="d">最低$200,000起（单人），不可退还。<br>优势：流程简单，无需管理房产，整体费用更低。<br>适合：追求简单快捷的纯护照需求。</div></div>';
+    h+='<div class="prog mb"><h4>路线B：政府批准房地产</h4><span class="st st-m">可选</span><div class="d">最低$200,000起，持有3年（5年后可售予另一CBI申请人）。<br>优势：有退出机制，可能保值。<br>注意：需考虑物业费、税费、管理成本。</div></div>';
+    if(investroute==='edf')h+='<div class="hb">💡 您倾向EDF捐款——推荐路线A，最快4-6个月获批。</div>';
+    else if(investroute==='realestate')h+='<div class="hb">💡 您倾向购房——注意持有期3年，退出须等5年且买家须为CBI申请人。</div>';
+    h+='</div>';
+
+    // Score detail
+    h+='<div class="rs-card"><h3 style="font-size:16px;margin-bottom:12px;color:#006b3f">📋 逐项评分</h3>';
+    scoreDetail.forEach(function(d){h+='<div style="padding:6px 0;border-bottom:1px solid #f3f4f6;font-size:13px">'+d[0]+' '+d[1]+'</div>';});
+    h+='</div>';
+
+    // Comparison table
+    h+='<div class="rs-card"><h3 style="font-size:16px;margin-bottom:12px;color:#006b3f">🌍 加勒比CBI横向对比</h3>';
+    h+='<table class="cm"><tr><th>维度</th><th>🇩🇲 多米尼克</th><th>🇬🇩 格林纳达</th><th>🇰🇳 圣基茨</th></tr>';
+    h+='<tr><td>最低投资</td><td>$200K</td><td>$240K</td><td>$250K</td></tr>';
+    h+='<tr><td>免签国</td><td class="g">140+ 最强</td><td>140+</td><td>150+</td></tr>';
+    h+='<tr><td>美国E-2</td><td class="o">❌ 不可</td><td class="g">✅ 可</td><td class="o">❌ 不可</td></tr>';
+    h+='<tr><td>申根免签</td><td class="g">✅</td><td class="g">✅</td><td class="g">✅</td></tr>';
+    h+='<tr><td>审批速度</td><td>4-6月</td><td>4-6月</td><td>4-6月</td></tr>';
+    h+='<tr><td>个税</td><td>0%</td><td>0%</td><td>0%</td></tr>';
+    h+='<tr><td>强制面试</td><td>✅ 是</td><td>✅ 是</td><td>✅ 是</td></tr>';
+    h+='</table>';
+    h+='</div>';
+
+    // Recommendation
+    h+='<div class="rs-card"><h3 style="font-size:16px;margin-bottom:12px;color:#006b3f">🎯 个性化建议</h3>';
+
+    if(wantE2){
+      h+='<div class="hb w"><strong>⚠️ E-2赴美需求冲突</strong><br>多米尼克<strong>不是</strong>美国E-2条约国。如果E-2是核心需求，强烈建议考虑：<br>· <strong>格林纳达（$240K）</strong>——加勒比唯一E-2条约国<br>· <strong>土耳其（$40万购房）</strong>——E-2条约国+3年可卖房退出<br></div>';
+    }
+    if(wantSchedule||schedule==='frequent'||schedule==='occasional'){
+      h+='<div class="hb"><strong>✅ 申根免签——多米尼克核心优势</strong><br>140+国免签，涵盖申根区26国、英国、新加坡、香港。在加勒比五国中签证自由度最高梯队。<br>· 无需为每次欧洲出行办申根签<br>· 英国免签6个月<br>· 亚洲：新加坡、香港、马来西亚均免签</div>';
+    }
+    if(ps.indexOf('tax')!==-1||ps.indexOf('asset')!==-1){
+      h+='<div class="hb"><strong>✅ 税务与资产保护</strong><br>· 0%个人所得税<br>· 无资本利得税、财富税、遗产税<br>· 金融隐私保护好<br>· 组合策略：多米尼克护照 + 香港/新加坡银行 + 迪拜公司</div>';
+    }
+    if(wantHQS){
+      h+='<div class="hb w"><strong>⚠️ 华侨生联考</strong><br>多米尼克护照理论上可作为外籍身份申请华侨生联考，但：<br>· 多米尼克为小国护照，部分985/211院校可能有额外审核<br>· 若华侨生联考为核心需求，<strong>土耳其护照</strong>（$40万购房）或马耳他（欧洲）认可度更高</div>';
+    }
+
+    h+='<div class="hb">📋 <strong>下一步行动：</strong><br>1. 确认家庭组成细节以精确报价<br>2. 联系持牌代理（多米尼克CBI Unit授权）<br>3. 准备资金来源证明文件<br>4. 预约强制面试（迪拜/香港等海外办公室）<br>5. 审批周期：4-6个月</div>';
+
+    h+='<div class="hb w">⚠️ 本评估由AI基于问卷自动生成，仅供参考。实际审批以多米尼克CBI Unit（cbiu.gov.dm）为准。政策截至2026年6月，后续可能调整。</div>';
+    h+='</div>';
+
+    h+='<button class="btn-sm" onclick="goBack()" style="margin:8px 0">✏️ 返回修改</button>';
+
+    D.getElementById('results').innerHTML=h;
+  }
+})();
+</script>
+</body>
+</html>
